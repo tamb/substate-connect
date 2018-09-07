@@ -1,6 +1,6 @@
 {
   "name": "substate-connect",
-  "version": "1.1.0",
+  "version": "3.0.0",
   "description": "Simple function to make SubState work better with ReactJS",
   "main": "index.js",
   "scripts": {
@@ -21,9 +21,12 @@
   },
   "homepage": "https://github.com/TomSaporito/substate-connect#readme",
   "devDependencies": {
+    "@babel/core": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.2",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "parcel": "^1.9.7",
     "react": "^16.5.0",
     "react-dom": "^16.5.0"
   },
@@ -32,6 +35,9 @@
     "index.map"
   ],
   "dependencies": {
-    "substate": "^4.0.0"
+    "@babel/preset-react": "^7.0.0",
+    "substate": "^4.0.0",
+    "webpack": "^4.17.2",
+    "webpack-cli": "^3.1.0"
   }
 }
