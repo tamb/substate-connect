@@ -5,6 +5,6 @@ parcelRequire=function(e,r,n,t){var i="function"==typeof parcelRequire&&parcelRe
 },{"object-assign":"J4Nk"}],"1n8/":[function(require,module,exports) {
 "use strict";module.exports=require("./cjs/react.production.min.js");
 },{"./cjs/react.production.min.js":"awqi"}],"Focm":[function(require,module,exports) {
-"use strict";Object.defineProperty(exports,"__esModule",{value:!0});var e=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var t=arguments[r];for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])}return e},r=require("react"),t=n(r);function n(e){return e&&e.__esModule?e:{default:e}}var o=function(r,n){return function(o){return function(u){var a={};for(var c in n)a[c]=r.getProp(n[c]);return t.default.createElement(o,e({},a,u))}}};exports.default={connect:o};
+"use strict";Object.defineProperty(exports,"__esModule",{value:!0}),exports.connect=void 0;var e=Object.assign||function(e){for(var r=1;r<arguments.length;r++){var t=arguments[r];for(var n in t)Object.prototype.hasOwnProperty.call(t,n)&&(e[n]=t[n])}return e},r=require("react"),t=n(r);function n(e){return e&&e.__esModule?e:{default:e}}var o=function(r,n){return function(o){return function(u){var c={};for(var a in n)c[a]=r.getProp(n[a]);return t.default.createElement(o,e({},c,u))}}};exports.connect=o;
 },{"react":"1n8/"}]},{},["Focm"], null)
 //# sourceMappingURL=/index.map

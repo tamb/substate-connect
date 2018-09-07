@@ -12,6 +12,6 @@ const connect = (state, chunk)=> Comp => props =>{
     return (<Comp {...newProps} {...props} />)
 };
 
-export default {
+export {
     connect
 }
