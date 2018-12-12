@@ -1,6 +1,8 @@
 # substate-connect
 Simple function to make SubState work better with ReactJS
 
+[Demo repo](https://github.com/tamb/substate-demo)
+
 ## Example usage
 `import {connect} from 'substate-connect';
 
