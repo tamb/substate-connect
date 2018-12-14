@@ -4,12 +4,10 @@ Simple function to make SubState work better with ReactJS
 [Demo repo](https://github.com/tamb/substate-demo)
 
 ## Example usage
-`import {connect} from 'substate-connect';
-
+```
+import {connect} from 'substate-connect';
 import substateInstance from './mystate.js';
-`
-
-`/**
+/**
     MyComponent
 */
 
@@ -17,7 +15,8 @@ export default connect(substateinstance, {
     prop1: 'path.to.prop',
     prop2: 'name',
     prop3: 'location' 
-    })(MyComponent);`
+    })(MyComponent);
+```
 
 ## What the H does this do?
 Similar to react-redux `connect` method.
