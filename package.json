@@ -1,6 +1,6 @@
 {
   "name": "substate-connect",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "Simple function to make SubState work better with ReactJS",
   "main": "index.js",
   "scripts": {
@@ -31,8 +31,7 @@
     "react-dom": "^16.5.0"
   },
   "files": [
-    "index.js",
-    "index.map"
+    "index.js"
   ],
   "dependencies": {
     "@babel/preset-react": "^7.0.0",
