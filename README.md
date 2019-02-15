@@ -30,3 +30,5 @@ Mapping props allows your component to have its own prop structure and not care 
 
 ## What about props through composition?
 Pass those in as you normally would.  They will be alongside the props from the `connect` method.  This way you can pass functions into the component during normal composition. 
+
+__This package does work with Preact__
