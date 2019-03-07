@@ -1,6 +1,6 @@
 {
   "name": "substate-connect",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "description": "Simple function to make SubState work better with ReactJS",
   "main": "index.js",
   "scripts": {
