@@ -1,3 +1,4 @@
+import React from 'react';
 /**
  * 
  * @param {Object} state - Reference to SubState instance 
