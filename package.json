@@ -4,7 +4,7 @@
   "description": "Easily wire up substate with popular front-end libraries",
   "main": "dist/",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx webpack --mode=production"
   },
   "repository": {
     "type": "git",
