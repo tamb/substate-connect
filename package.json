@@ -1,6 +1,6 @@
 {
   "name": "substate-connect",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.2",
   "description": "Easily wire up substate with popular front-end libraries",
   "main": "dist/",
   "scripts": {
