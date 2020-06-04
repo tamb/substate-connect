@@ -4,7 +4,7 @@ Simple function to make SubState work better with ReactJS
 [Demo repo](https://github.com/tamb/substate-demo)
 
 ## Example usage
-```
+```js
 import {connect} from 'substate-connect';
 import substateInstance from './mystate.js';
 /**
@@ -16,6 +16,21 @@ export default connect(substateinstance, {
     prop2: 'name',
     prop3: 'location' 
     })(MyComponent);
+```
+
+```js
+// App.js
+import { Provide } from 'substate-connect';
+import substateIntsance from './mystate.js';
+
+/*
+
+function App....
+
+*/
+const WiredApp = Provide(substateInstance, ["STATE_UPDATED"])(App);
+
+export default WiredApp;
 ```
 
 ## What the H does this do?
