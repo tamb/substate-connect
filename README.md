@@ -31,7 +31,7 @@ import substateIntsance from './mystate.js';
 function App....
 
 */
-const WiredApp = Provide(substateInstance, ["STATE_UPDATED"])(App);
+const WiredApp = Provide(substateInstance, ["STATE_UPDATED"], onMount)(App);
 
 export default WiredApp;
 ```
@@ -42,6 +42,11 @@ Similar to react-redux `connect` method.
 You pass in a reference to the substate instance, so we can wire up the props, and you pass in an object mapping the prop names for the component (the keys), to the prop values you want (the path -- as a string -- to the chunk of state you need).  Then it returns a function which needs your component as an argument.  
 
 The `Provide` HOC needs the substate instance as a first argument.  The second argument is an array of `substate` `$type`s you want the App to `setState` too.  It's recommended to at least have `"STATE_UPDATED"` passed in the array.
+
+`onMount` is a function that will fire when the Provide higher order component mounts.
+The signature:
+`onMount(store, triggers)`
+So you have access to the store and triggers passed in. Note: `this` is bound to the HOC.
 
 Now it's all wired up.
 

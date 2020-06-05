@@ -12,13 +12,14 @@ const connect = (state, chunk) => (Comp) => (props) => {
   return <Comp {...newProps} {...props} />;
 };
 
-const Provide = (store, triggers) => (Comp) => {
+const Provide = (store, triggers, onMount) => (Comp) => {
 
   return class extends Component{
     componentDidMount(){
       triggers.forEach(actionName => {
         store.on(actionName, ns => this.setState(ns));
       });
+      onMount? onMount.call(this, store, triggers) : null;
     }
 
     render(){
