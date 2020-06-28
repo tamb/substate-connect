@@ -1,10 +1,10 @@
 {
   "name": "substate-connect",
-  "version": "3.1.0-alpha.3",
+  "version": "3.1.0-alpha.4",
   "description": "Easily wire up substate with popular front-end libraries",
   "main": "dist/",
   "scripts": {
-    "build": "npx webpack --mode=production",
+    "build": "npx webpack --mode=production && npx webpack --mode=development",
     "pre": "npm run build && npm publish --tag next"
   },
   "repository": {

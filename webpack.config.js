@@ -1,44 +1,52 @@
-const path = require('path');
+const path = require("path");
+// const webpack = require("webpack");
 
+module.exports = (env, args) => {
+  console.log(env, args);
+  return [reactConfig(env, args), backwardsCompatConfig];
+};
 
-const reactConfig = {
-  entry: './src/react/index.js',
-  output: {
+const reactConfig = (env, args) => {
+
+  return {
+    devtool: args.mode === 'production'? false : 'eval-cheap-source-map',
+    entry: "./src/react/index.js",
+    output: {
       path: path.resolve(__dirname),
-      filename: 'dist/react/index.js',     
-      library: 'substateConnect',
-      libraryTarget: 'umd'
-  },
-  module: {
+      filename:
+        args.mode === "production"
+          ? "dist/react/index.js"
+          : "dist/react/index.dev.js",
+      library: "substateConnect",
+      libraryTarget: "umd",
+    },
+    module: {
       rules: [
         {
           test: /\.js$/,
           exclude: /node_modules/,
-          use: ["babel-loader"]
-        }
-      ]
+          use: ["babel-loader"],
+        },
+      ],
     },
+  };
 };
-
 
 const backwardsCompatConfig = {
-  entry: './src/react/index.js',
+  entry: "./src/react/index.js",
   output: {
-      path: path.resolve(__dirname),
-      filename: 'dist/index.js',     
-      library: 'substateConnect',
-      libraryTarget: 'umd'
+    path: path.resolve(__dirname),
+    filename: "dist/index.js",
+    library: "substateConnect",
+    libraryTarget: "umd",
   },
   module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /node_modules/,
-          use: ["babel-loader"]
-        }
-      ]
-    },
+    rules: [
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"],
+      },
+    ],
+  },
 };
-
-
-module.exports = [reactConfig, backwardsCompatConfig];
