@@ -28,7 +28,7 @@ import substateIntsance from './mystate.js';
 
 /*
 
-function App....
+App Component MUST be wired with connect
 
 */
 const WiredApp = Provide(substateInstance, ["STATE_UPDATED"], onMount)(App);
